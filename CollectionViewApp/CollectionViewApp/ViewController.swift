@@ -4,8 +4,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let imageView = UIImageView(image: UIImage(named: "01"))
+        
+        view.addSubview(imageView)
     }
-
-
 }
