@@ -2,17 +2,24 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let topImageContainerView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     let bearImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "bear_first"))
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
     let descriptionTextView: UITextView = {
         let textView = UITextView()
+        textView.translatesAutoresizingMaskIntoConstraints = false
         textView.text = "Join us today in our fun and games!"
         textView.font = UIFont.boldSystemFont(ofSize: 18)
-        textView.translatesAutoresizingMaskIntoConstraints = false
         textView.textAlignment = .center
         textView.isEditable = false
         textView.isScrollEnabled = false
@@ -22,17 +29,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(bearImageView)
+        view.addSubview(topImageContainerView)
+        topImageContainerView.addSubview(bearImageView)
         view.addSubview(descriptionTextView)
         
         setupLayout()
     }
     
     private func setupLayout() {
-        bearImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        bearImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
-        bearImageView.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        bearImageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        
+        topImageContainerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        topImageContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        topImageContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        topImageContainerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5).isActive = true
+        
+        bearImageView.centerXAnchor.constraint(equalTo: topImageContainerView.centerXAnchor).isActive = true
+        bearImageView.centerYAnchor.constraint(equalTo: topImageContainerView.centerYAnchor).isActive = true
+        bearImageView.heightAnchor.constraint(equalTo: topImageContainerView.heightAnchor, multiplier: 0.5).isActive = true
         
         descriptionTextView.topAnchor.constraint(equalTo: bearImageView.bottomAnchor, constant: 120).isActive = true
         descriptionTextView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
