@@ -2,6 +2,8 @@ import UIKit
 
 class SwipingController: UICollectionViewController {
     
+    let imageNames = ["bear_first"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -11,12 +13,11 @@ class SwipingController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return imageNames.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
-// cell.backgroundColor = indexPath.item % 2 == 0 ? .red : .green
         return cell
     }
 }
