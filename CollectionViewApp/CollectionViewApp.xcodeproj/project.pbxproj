@@ -16,6 +16,7 @@
 		3AD8288C26CE17860011FD9B /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD8288B26CE17860011FD9B /* PageCell.swift */; };
 		3AD8288E26CE22BA0011FD9B /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD8288D26CE22BA0011FD9B /* Page.swift */; };
 		3AED789A26CE417B003687DD /* SwipingController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AED789926CE417B003687DD /* SwipingController+Extension.swift */; };
+		3AED789E26CE4340003687DD /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AED789D26CE4340003687DD /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3AD8288B26CE17860011FD9B /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		3AD8288D26CE22BA0011FD9B /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		3AED789926CE417B003687DD /* SwipingController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+Extension.swift"; sourceTree = "<group>"; };
+		3AED789D26CE4340003687DD /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				3AED789926CE417B003687DD /* SwipingController+Extension.swift */,
 				3AD8288B26CE17860011FD9B /* PageCell.swift */,
 				3AD8288D26CE22BA0011FD9B /* Page.swift */,
+				3AED789D26CE4340003687DD /* UIColor+Extension.swift */,
 				3AAEAB1526CD0A540044B0D4 /* Main.storyboard */,
 				3AAEAB1826CD0A590044B0D4 /* Assets.xcassets */,
 				3AAEAB1A26CD0A590044B0D4 /* LaunchScreen.storyboard */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AED789E26CE4340003687DD /* UIColor+Extension.swift in Sources */,
 				3AAEAB1426CD0A540044B0D4 /* ViewController.swift in Sources */,
 				3AAEAB1026CD0A540044B0D4 /* AppDelegate.swift in Sources */,
 				3AD8288C26CE17860011FD9B /* PageCell.swift in Sources */,
