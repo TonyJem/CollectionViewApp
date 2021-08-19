@@ -17,7 +17,10 @@ class SwipingController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! PageCell
+        
+        let imageName = imageNames[indexPath.item]
+        cell.bearImageView.image = UIImage(named: imageName)
         return cell
     }
 }
