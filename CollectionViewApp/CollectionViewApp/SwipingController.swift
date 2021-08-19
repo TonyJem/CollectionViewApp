@@ -2,7 +2,7 @@ import UIKit
 
 class SwipingController: UICollectionViewController {
     
-    let imageNames = ["bear_first"]
+    let imageNames = ["bear_first", "heart_second", "leaf_third"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
