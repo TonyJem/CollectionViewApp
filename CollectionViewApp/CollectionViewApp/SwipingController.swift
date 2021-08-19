@@ -28,6 +28,10 @@ class SwipingController: UICollectionViewController {
     
     @objc private func handlePrev() {
         print("🟢 PREV Button did Tap!")
+        let prevIndex = max(pageControl.currentPage - 1, 0)
+        let indexPath = IndexPath(item: prevIndex, section: .zero)
+        pageControl.currentPage = prevIndex
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
     
     private let nextButton: UIButton = {
@@ -42,6 +46,10 @@ class SwipingController: UICollectionViewController {
     
     @objc private func handleNext() {
         print("🟢 NEXT Button did Tap!")
+        let nextIndex = min(pageControl.currentPage + 1, pages.count - 1)
+        let indexPath = IndexPath(item: nextIndex, section: .zero)
+        pageControl.currentPage = nextIndex
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
     
     private let pageControl: UIPageControl = {
