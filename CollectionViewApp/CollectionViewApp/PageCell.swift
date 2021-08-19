@@ -17,20 +17,20 @@ class PageCell: UICollectionViewCell {
         }
     }
     
-    let topImageContainerView: UIView = {
+    private let topImageContainerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
-    let bearImageView: UIImageView = {
+    private let bearImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "bear_first"))
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
-    let descriptionTextView: UITextView = {
+    private let descriptionTextView: UITextView = {
         let textView = UITextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
         
