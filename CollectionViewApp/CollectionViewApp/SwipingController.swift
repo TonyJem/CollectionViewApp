@@ -83,6 +83,13 @@ class SwipingController: UICollectionViewController {
         setupBottomControls()
     }
     
+    override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+        let x = targetContentOffset.pointee.x
+//        print(x, view.frame.width, x / view.frame.width)
+        pageControl.currentPage = Int(x / view.frame.width)
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return pages.count
     }
