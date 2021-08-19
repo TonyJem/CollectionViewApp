@@ -14,6 +14,7 @@
 		3AAEAB1C26CD0A590044B0D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AAEAB1A26CD0A590044B0D4 /* LaunchScreen.storyboard */; };
 		3AAEAB2426CD45A50044B0D4 /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEAB2326CD45A50044B0D4 /* SwipingController.swift */; };
 		3AD8288C26CE17860011FD9B /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD8288B26CE17860011FD9B /* PageCell.swift */; };
+		3AD8288E26CE22BA0011FD9B /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD8288D26CE22BA0011FD9B /* Page.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3AAEAB1D26CD0A590044B0D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AAEAB2326CD45A50044B0D4 /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
 		3AD8288B26CE17860011FD9B /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		3AD8288D26CE22BA0011FD9B /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				3AAEAB1326CD0A540044B0D4 /* ViewController.swift */,
 				3AAEAB2326CD45A50044B0D4 /* SwipingController.swift */,
 				3AD8288B26CE17860011FD9B /* PageCell.swift */,
+				3AD8288D26CE22BA0011FD9B /* Page.swift */,
 				3AAEAB1526CD0A540044B0D4 /* Main.storyboard */,
 				3AAEAB1826CD0A590044B0D4 /* Assets.xcassets */,
 				3AAEAB1A26CD0A590044B0D4 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 				3AAEAB1026CD0A540044B0D4 /* AppDelegate.swift in Sources */,
 				3AD8288C26CE17860011FD9B /* PageCell.swift in Sources */,
 				3AAEAB2426CD45A50044B0D4 /* SwipingController.swift in Sources */,
+				3AD8288E26CE22BA0011FD9B /* Page.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
