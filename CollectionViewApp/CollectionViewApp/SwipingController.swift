@@ -2,6 +2,21 @@ import UIKit
 
 class SwipingController: UICollectionViewController {
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        
+        coordinator.animate(alongsideTransition: { (_) in
+            self.collectionViewLayout.invalidateLayout()
+            
+            if self.pageControl.currentPage == 0 {
+                self.collectionView?.contentOffset = .zero
+            } else {
+                let indexPath = IndexPath(item: self.pageControl.currentPage, section: 0)
+                self.collectionView?.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+            }
+        }) { (_) in
+        }
+    }
+    
     private let pages = [
         Page(imageName: "bear_first",
              headerText: "Join us today in our fun and games!",
@@ -86,7 +101,7 @@ class SwipingController: UICollectionViewController {
     override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         
         let x = targetContentOffset.pointee.x
-//        print(x, view.frame.width, x / view.frame.width)
+        // print(x, view.frame.width, x / view.frame.width)
         pageControl.currentPage = Int(x / view.frame.width)
     }
     
