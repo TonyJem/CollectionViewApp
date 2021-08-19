@@ -22,8 +22,13 @@ class SwipingController: UICollectionViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.setTitleColor(.gray, for: .normal)
+        button.addTarget(self, action: #selector(handlePrev), for: .touchUpInside)
         return button
     }()
+    
+    @objc private func handlePrev() {
+        print("🟢 PREV Button did Tap!")
+    }
     
     private let nextButton: UIButton = {
         let button = UIButton(type: .system)
@@ -31,8 +36,13 @@ class SwipingController: UICollectionViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.setTitleColor(.mainPink, for: .normal)
+        button.addTarget(self, action: #selector(handleNext), for: .touchUpInside)
         return button
     }()
+    
+    @objc private func handleNext() {
+        print("🟢 NEXT Button did Tap!")
+    }
     
     private let pageControl: UIPageControl = {
         let pc = UIPageControl()
