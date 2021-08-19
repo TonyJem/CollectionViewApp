@@ -13,6 +13,18 @@ class SwipingController: UICollectionViewController {
         
         Page(imageName: "leaf_third",
              headerText: "VIP members special services",
+             bodyText: ""),
+        
+        Page(imageName: "bear_first",
+             headerText: "Join us today in our fun and games!",
+             bodyText: "Are you ready for loads and loads of fun? Don't wait any longer! We hope to see you in our stores soon."),
+        
+        Page(imageName: "heart_second",
+             headerText: "Subscribe and get coupons on our daily events",
+             bodyText: "Get notified of the savings immediately when we announce them on our website. Make sure to also give us any feedback you have."),
+        
+        Page(imageName: "leaf_third",
+             headerText: "VIP members special services",
              bodyText: "")
     ]
     
@@ -52,10 +64,10 @@ class SwipingController: UICollectionViewController {
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
     
-    private let pageControl: UIPageControl = {
+    private lazy var pageControl: UIPageControl = {
         let pc = UIPageControl()
         pc.currentPage = 0
-        pc.numberOfPages = 4
+        pc.numberOfPages = pages.count
         pc.currentPageIndicatorTintColor = .mainPink
         pc.pageIndicatorTintColor = .secondaryPink
         return pc
